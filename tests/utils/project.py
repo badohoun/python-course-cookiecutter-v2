@@ -1,3 +1,6 @@
+"""Functions for creating a cookiecut project to be used in tests."""
+
+
 import json
 import shutil
 import subprocess

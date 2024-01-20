@@ -1,3 +1,5 @@
+"""Fixture for a reusable cookiecut template project for tests."""
+
 import json
 import shutil
 import subprocess
@@ -10,7 +12,10 @@ from uuid import uuid4
 import pytest
 
 from tests.utils import project
-from tests.utils.project import generate_project, initialize_git_repo
+from tests.utils.project import (
+    generate_project,
+    initialize_git_repo,
+)
 
 
 @pytest.fixture(scope="session")

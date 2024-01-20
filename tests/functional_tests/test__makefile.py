@@ -1,4 +1,4 @@
-
+"""Test that generated makefile works."""
 import subprocess
 from pathlib import Path
 from turtle import circle
