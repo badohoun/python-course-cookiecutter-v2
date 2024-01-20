@@ -1,1 +1,0 @@
-""" definition of functionnal tests """
