@@ -1,17 +1,12 @@
 """Fixture for a reusable cookiecut template project for tests."""
 
-import json
 import shutil
 import subprocess
-from copy import deepcopy
 from pathlib import Path
-from re import template
-from typing import Dict
 from uuid import uuid4
 
 import pytest
 
-from tests.utils import project
 from tests.utils.project import (
     generate_project,
     initialize_git_repo,
