@@ -1,7 +1,7 @@
 """Test that generated makefile works."""
+
 import subprocess
 from pathlib import Path
-from turtle import circle
 
 from tests.fixtures.project_dir import project_dir
 
@@ -46,4 +46,4 @@ Tests:
 Cleanup/Teardown
 5. remove virtual environnment 
 6. remove generated project 
-"""""""""""""""""""""""""""
+"""
