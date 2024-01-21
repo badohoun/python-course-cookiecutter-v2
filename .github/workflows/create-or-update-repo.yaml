@@ -10,7 +10,7 @@ on:
       is_public_repo:
          description: If unchecked, repo is private.
          required: true
-         default: false
+         default: true
          type: boolean
       package_import_name:
          description: Used in import, e.g. `from <name> import ...
