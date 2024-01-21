@@ -27,8 +27,8 @@ def generate_project(template_values: Dict[str, str], test_session_id: str):
     :param test_session_id: potentially randomly generated string used to
         ensure uniqueness of generated file names.
     """
-    template_values: Dict[str, str] = deepcopy(template_values)
-    cookiecutter_config = {"default_context": template_values}
+    template_values2: Dict[str, str] = deepcopy(template_values)
+    cookiecutter_config = {"default_context": template_values2}
     cookiecutter_config_fpath = PROJECT_DIR / f"tests/cookiecutter-{test_session_id}.json"
     cookiecutter_config_fpath.write_text(json.dumps(cookiecutter_config))
 
@@ -45,5 +45,5 @@ def generate_project(template_values: Dict[str, str], test_session_id: str):
     print("COMMAND:", " ".join(cmd))
     subprocess.run(cmd, check=True)
 
-    generated_repo_dir = PROJECT_DIR / "sample" / template_values["repo_name"]
+    generated_repo_dir = PROJECT_DIR / "sample" / template_values2["repo_name"]
     return generated_repo_dir
