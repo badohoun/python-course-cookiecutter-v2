@@ -2,7 +2,6 @@
 #
 # You can also run multiple in sequence, e.g. `make clean lint test serve-coverage-report`
 
-
 clean:
 	bash run.sh clean
 
@@ -18,13 +17,12 @@ generate-project:
 lint:
 	bash run.sh lint
 
-
-# generated a project 
-# execute make lint 
-
 lint-ci:
 	bash run.sh lint:ci
 
-
 test:
 	bash run.sh run-tests
+
+# write a github actions workflow
+# execute our tests
+# run our linting
