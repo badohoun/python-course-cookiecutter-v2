@@ -35,4 +35,4 @@ def project_dir() -> Generator[Path, None, None]:
 def generate_test_session_id() -> str:
     """Return a andomly generated, unique string."""
     test_session_id = str(uuid4())[:6]
-    return test_session_id    return test_session_id
+    return test_session_id
