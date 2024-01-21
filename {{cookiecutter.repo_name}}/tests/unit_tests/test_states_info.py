@@ -1,8 +1,11 @@
-"""Tests for `example_pkg.states_info`."""
+"""Tests for `{{cookiecutter.package_import_name}}.states_info`."""
 
 
 import pytest
-from example_pkg.states_info import is_city_capitol_of_state, slow_add
+from {{cookiecutter.package_import_name}}.states_info import (
+    is_city_capitol_of_state,
+    slow_add,
+)
 
 
 @pytest.mark.parametrize(
@@ -15,13 +18,9 @@ from example_pkg.states_info import is_city_capitol_of_state, slow_add
     ],
 )
 def test__is_city_capitol_of_state(city_name: str, state: str, is_capitol: bool):
-    """Assert ìs_city_capitol_of_state()` returns correct answer for city-state pairs."""
+    """Assert `is_city_captio_of_state()` returns correct answer for city-state pairs."""
     assert is_city_capitol_of_state(city_name=city_name, state=state) == is_capitol
 
-
-
-#def test__fail():
-    #assert False 
 
 @pytest.mark.slow
 def test__slow_add():

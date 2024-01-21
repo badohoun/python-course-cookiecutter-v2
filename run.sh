@@ -99,7 +99,7 @@ function push-initial-readme-to-repo {
 #    GITHUB_USERNAME - name of my github user, e.g. phitoduck
 #    IS_PUBLIC_REPO - if true, the repository will be public, otherwise private
 function create-repo-if-not-exists {
-    local IS_PUBLIC_REPO=${IS_PUBLIC_REPO:-false}
+    local IS_PUBLIC_REPO=${IS_PUBLIC_REPO:-true}
 
     # check to see if the repository exists; if it does, return
     echo "Checking to see if $GITHUB_USERNAME/$REPO_NAME exists..."
@@ -123,7 +123,7 @@ function create-repo-if-not-exists {
 # args:
 #    TEST_PYPI_TOKEN, PROD_PYPI_TOKEN - auth token for test and prod PyPI
 #    REPO_NAME - name of the repository
-#    GITHUB_USERNAME - name of my github user, e.g. phitoduck
+#    GITHUB_USERNAME - name of my github user, e.g. badohoun
 function configure-repo {
     # configure github actions secrets
     gh secret set TEST_PYPI_TOKEN \
@@ -149,7 +149,7 @@ function configure-repo {
 
 # args:
 #    REPO_NAME - name of the repository
-#    GITHUB_USERNAME - name of my github user, e.g. phitoduck
+#    GITHUB_USERNAME - name of my github user, e.g. badohoun
 #    PACKAGE_IMPORT_NAME - e.g. if "exapmle_pkg" then "import example_pkg"
 function open-pr-with-generated-project {
     rm -rf "$REPO_NAME" ./outdir
@@ -200,7 +200,7 @@ EOF
 
     # if GH_TOKEN is set, set the remote url to it
     if [[ -n "$GH_TOKEN" ]]; then
-        git remote set-url origin "https://$GITHUB_USERNAME:$GH_TOKEN@github.com/phitoduck/$REPO_NAME"
+        git remote set-url origin "https://$GITHUB_USERNAME:$GH_TOKEN@github.com/badohoun/$REPO_NAME"
     fi
     git push origin "$UNIQUE_BRANCH_NAME"
 
