@@ -11,7 +11,7 @@ repos:
       - id: check-merge-conflict
       # Trims trailing whitespace. Allow a single space on the end of .md lines for hard line breaks.
       #- id: trailing-whitespace
-        args: [--markdown-linebreak-ext=md]
+        #args: [--markdown-linebreak-ext=md]
       # Makes sure files end in a newline and only a newline;
       #- id: end-of-file-fixer
       # Attempts to load all TOML files to verify syntax.
